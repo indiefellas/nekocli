@@ -2,7 +2,7 @@ name: Publish Package to npmjs
 on:
   workflow_dispatch:
     inputs:
-      tag:
+      version:
         description: 'The version of the release'
         required: true
 
