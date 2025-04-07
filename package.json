@@ -1,0 +1,19 @@
+{
+  "name": "nekocli",
+  "description": "nekocli is a console app that makes it simple to make websites with Nekoweb.",
+  "version": "0.1.0-b1",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@indiefellas/nekoweb-api": "^1.0.0-beta.3",
+    "commander": "^13.1.0",
+    "console-log-colors": "^0.5.0"
+  }
+}
