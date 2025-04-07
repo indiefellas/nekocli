@@ -6,13 +6,18 @@
   "type": "module",
   "private": true,
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "@types/yauzl": "^2.10.3"
   },
   "peerDependencies": {
     "typescript": "^5"
   },
   "dependencies": {
-    "@indiefellas/nekoweb-api": "^1.0.0-beta.3",
-    "commander": "^13.1.0"
+    "@indiefellas/nekoweb-api": "../nekoweb-api",
+    "commander": "^13.1.0",
+    "is-binary-path": "^3.0.0",
+    "launch-editor": "^2.10.0",
+    "watcher": "^2.3.1",
+    "yauzl": "^3.2.0"
   }
 }
