@@ -25,7 +25,7 @@ function getBinaryName() {
 function installBinary() {
   const binaryName = getBinaryName();
   const sourcePath = path.join(__dirname, 'bin', binaryName);
-  const destinationPath = path.join(__dirname, 'bin', 'app');
+  const destinationPath = path.join(__dirname, 'bin', 'nekoApp');
 
   try {
     fs.copyFileSync(sourcePath, destinationPath);

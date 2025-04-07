@@ -54,8 +54,13 @@ cli.addHelpText(
     '\nMade with love by the indiefellas team:\n  ' + styleText(['green', 'underline'], 'https://team.indieseas.net'),
 );
 
+if (!env.NEKOWEB_APIKEY) {
+    console.error(styleText('red', '[ERR]'), 'NEKOWEB_APIKEY is required.')
+    process.exit(-1)
+}
+
 const neko = new NekowebAPI({
-    apiKey: env.NEKOWEB_APIKEY ?? '',
+    apiKey: env.NEKOWEB_APIKEY,
     appName: 'nekocli'
 })
 
