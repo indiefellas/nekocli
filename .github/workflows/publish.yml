@@ -1,0 +1,36 @@
+name: Publish Package to npmjs
+on:
+  workflow-dispatch:
+    inputs:
+      tag:
+        description: 'The version of the release'
+        required: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-bun@v2
+        with:
+          registry-url: 'https://registry.npmjs.org'
+      - run: bun ci
+      - run: bun publish --access public
+        env:
+          BUN_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Create Release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.event.inputs.version }}
+          release_name: Release ${{ github.event.inputs.version }}
+          draft: false
+          prerelease: false 
+      - uses: AButler/upload-release-assets@v3.0
+        with:
+          files: "bin/*"
+          repo-token: ${{ secrets.GITHUB_TOKEN }}

@@ -7,8 +7,9 @@
     "moduleDetection": "force",
     "jsx": "react-jsx",
     "allowJs": true,
-    "rootDir": "./src",
-    "outDir": "./dist",
+    "declaration": true,
+
+    // Bundler mode
     "resolveJsonModule": true,
     "esModuleInterop": true,
 
