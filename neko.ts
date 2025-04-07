@@ -114,7 +114,7 @@ function watchDir(dest: string, extWatcher?: Watcher) {
                     break;
             }
         } catch (err) {
-            console.error(styleText('red', '[ERR]'), err.message)
+            console.error(styleText('red', '[ERR]'), (err as Error).message)
         }
         hasEvent = false;
     })
