@@ -1,5 +1,5 @@
 {
-  "name": "nekocli",
+  "name": "@indiefellas/nekocli",
   "description": "nekocli is a console app that makes it simple to make websites with Nekoweb.",
   "version": "0.1.0-b8",
   "module": "./src/neko.ts",
