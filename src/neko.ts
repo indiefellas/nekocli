@@ -11,6 +11,7 @@ import yauzl from 'yauzl';
 import launchEditor from 'launch-editor';
 import isBinaryPath from 'is-binary-path';
 import Watcher from 'watcher';
+import { env } from 'node:process';
 
 function getCommandsAndOptions(cli: commander.Command) {
     const commands = cli.commands.map((cmd) => ({
@@ -54,7 +55,7 @@ cli.addHelpText(
 );
 
 const neko = new NekowebAPI({
-    apiKey: '// YOUR API KEY (temporary, i will put a permanent solution for this)',
+    apiKey: env.NEKOWEB_APIKEY ?? '',
     appName: 'nekocli'
 })
 
