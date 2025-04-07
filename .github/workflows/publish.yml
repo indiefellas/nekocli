@@ -1,6 +1,6 @@
 name: Publish Package to npmjs
 on:
-  workflow-dispatch:
+  workflow_dispatch:
     inputs:
       tag:
         description: 'The version of the release'
