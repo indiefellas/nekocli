@@ -40,6 +40,6 @@
     "compile:linux-arm64": "bun build ./src/neko.ts --compile --production --bytecode --target=bun-linux-arm64 --outfile ./bin/neko-arm64",
     "compile:windows": "bun build ./src/neko.ts --compile --production --bytecode --target=bun-windows-x64 --outfile ./bin/neko",
     "prepack": "bun compile:linux-x64 && bun compile:linux-arm64 && bun compile:windows",
-    "postinstall": "node ./src/install.js"
+    "install": "node ./src/install.js"
   }
 }
