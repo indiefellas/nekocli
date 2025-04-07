@@ -4,7 +4,7 @@
     "": {
       "name": "nekocli",
       "dependencies": {
-        "@indiefellas/nekoweb-api": "../nekoweb-api",
+        "@indiefellas/nekoweb-api": "latest",
         "commander": "^13.1.0",
         "is-binary-path": "^3.0.0",
         "launch-editor": "^2.10.0",
@@ -21,7 +21,7 @@
     },
   },
   "packages": {
-    "@indiefellas/nekoweb-api": ["@indiefellas/nekoweb-api@file:../nekoweb-api", { "dependencies": { "form-data": "^4.0.2" }, "devDependencies": { "@types/bun": "latest" }, "peerDependencies": { "typescript": "^5" } }],
+    "@indiefellas/nekoweb-api": ["@indiefellas/nekoweb-api@1.0.0-beta.4", "", { "dependencies": { "form-data": "^4.0.2" }, "peerDependencies": { "typescript": "^5" } }, "sha512-TOmpf6LebAdoSZ34PO/TsYOlTv81hrxESecdpVxlapqxCAcVwzlcTJHVOzjZntUAotoQeHZLv8aUjHzkPLZ33A=="],
 
     "@types/bun": ["@types/bun@1.2.8", "", { "dependencies": { "bun-types": "1.2.7" } }, "sha512-t8L1RvJVUghW5V+M/fL3Thbxcs0HwNsXsnTEBEfEVqGteiJToOlZ/fyOEaR1kZsNqnu+3XA4RI/qmnX4w6+S+w=="],
 

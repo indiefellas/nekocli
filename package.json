@@ -1,23 +1,32 @@
 {
-  "name": "nekocli",
+  "name": "@indiefellas/nekocli",
   "description": "nekocli is a console app that makes it simple to make websites with Nekoweb.",
-  "version": "0.1.0-b1",
-  "module": "index.ts",
+  "version": "0.1.0-b4",
+  "module": "./dist/neko.js",
   "type": "module",
-  "private": true,
-  "devDependencies": {
-    "@types/bun": "latest",
-    "@types/yauzl": "^2.10.3"
+  "main": "./dist/neko.js",
+  "preferGlobal": true,
+  "bin": {
+    "neko": "./dist/neko.js"
   },
   "peerDependencies": {
     "typescript": "^5"
   },
   "dependencies": {
-    "@indiefellas/nekoweb-api": "../nekoweb-api",
+    "@indiefellas/nekoweb-api": "latest",
+    "@types/bun": "latest",
+    "@types/yauzl": "^2.10.3",
     "commander": "^13.1.0",
     "is-binary-path": "^3.0.0",
     "launch-editor": "^2.10.0",
     "watcher": "^2.3.1",
     "yauzl": "^3.2.0"
+  },
+  "keywords": [
+    "nekoweb",
+    "api"
+  ],
+  "scripts": {
+    "prepack": "tsc"
   }
 }

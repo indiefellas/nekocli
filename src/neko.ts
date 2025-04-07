@@ -3,14 +3,13 @@
 import { styleText } from 'node:util';
 import fs, { readFileSync, watch } from 'node:fs';
 import path from 'node:path';
-import { name, version, description } from './package.json';
+import { name, version, description } from '../package.json';
 import * as commander from 'commander';
 import NekowebAPI from '@indiefellas/nekoweb-api';
 import { tmpdir } from 'node:os';
 import yauzl from 'yauzl';
 import launchEditor from 'launch-editor';
 import isBinaryPath from 'is-binary-path';
-import { buffer } from 'node:stream/consumers';
 import Watcher from 'watcher';
 
 function getCommandsAndOptions(cli: commander.Command) {
@@ -31,7 +30,7 @@ function getCommandsAndOptions(cli: commander.Command) {
     return { commands, options };
 }
 
-const cli = new commander.Command(name)
+const cli = new commander.Command('neko')
     .version(version);
 
 cli.showHelpAfterError(true);

@@ -1,15 +1,7 @@
-# nekocli
+# `neko`: Nekoweb, straight into your command line
+nekocli is a console app that makes it simple to make websites with Nekoweb.
 
-To install dependencies:
-
-```bash
-bun install
+## Installation
+We recommend you to use bun for installing nekocli, as its not test
+Then, install it using these:
 ```
-
-To run:
-
-```bash
-bun run index.ts
-```
-
-This project was created using `bun init` in bun v1.2.7. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
